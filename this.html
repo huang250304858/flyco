@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this</title>
+</head>
+<body>
+	<script>
+		var name = "全局";
+		function getName() {
+			var name  = "局部";
+			return this.name;
+		};
+		alert(getName());
+		var foo = {
+			test:function() {
+				alert(this);
+			}
+		}
+		foo.test();
+		var baz = foo.test();
+		baz();
+	</script>
+</body>
+</html>
